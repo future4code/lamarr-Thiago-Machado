@@ -1,0 +1,32 @@
+1.	Ter Atenção no Enunciado
+Ter atenção é super importante. 
+Pois assim conseguiremos entender melhor o que está sendo pedido no enunciado!
+
+2.	Retirar Informações Relevantes 
+Isso ajuda no entendimento, e simplifica a questão!
+
+3.	Pensar nas Entradas e Saídas
+Facilita em entender quais serão seus primeiros passos, 
+e ajuda a entender qual resultado final desejamos!
+
+4.	Fazer Um Esquema Visual
+Facilita a visualização das nossas ideias, 
+principalmente para as pessoas mais visuais!
+
+5.	Criar Um Código Feio
+Isso é super importante, 
+pois o que importa de início é colocar as ideias em pratica, 
+(Precisamos primeiro criar um mostro, para depois transformar ele em um herói, 
+assim como o HUCK!!!) 
+
+6.	Testar: Força-Bruta
+Às vezes é necessário um pouco de força bruta, 
+pra ver o resultado kkkk!
+
+7.	Refatorar
+Depois de conseguir chegar no ponto que queríamos, 
+devemos agora deixar apresentável! 
+(é como quando estamos procurando uma roupa no guarda roupa, 
+é praticamente impossível deixar o guarda roupa bonitinho! 
+Então depois que alcançamos nosso objetivo, devemos organizar o que fizemos, 
+pra deixar bonitinho! : ) 
