@@ -116,76 +116,102 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-//     let novoArray = []
+   array.sort((a, b) => a - b);
 
-//     let maiorNumero = 0
-// 	for( let i = 0 ; i < array.length ; i++ ){ 
-// 		let numeroDoArray = array[i]
-//        		if( numeroDoArray > maiorNumero ){ 
-//            			maiorNumero = numeroDoArray
-// 	}
-//     }
-//     let menorNumero = maiorNumero
-// 	for( let i = 0 ; i < array.length ; i++ ){ 
-// 		let numeroDoArray = array[i]
-//        		if( numeroDoArray < menorNumero ){ 
-//            			menorNumero = numeroDoArray 
-// 	}
-//     }
-// let segundoNumero
-//     for(let i = 0; i < array.length; i++ ){
-//         let numeroDoArray = array[i]
-//         if(numeroDoArray < maiorNumero ){
-//            let segundo = numeroDoArray
-//            if(segundo > numeroDoArray){
-//                segundoNumero = segundo
-//            }
-//         }
-//     }
+   let novoArray = []
 
-// let segundoNumeroMenor
-//     for(let i = 0; i < ; i++ ){
-//         let numeroDoArray = array[i]
-//         if(numeroDoArray > menorNumero){
-//             segundoNumeroMenor = numeroDoArray
-//         }
-//     }
-//     novoArray.push(segundoNumero, segundoNumeroMenor)
-//     return novoArray
+   novoArray.push(array[array.length-2], array[1])
+   return novoArray
 
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-   
+   function filmeEmCartaz (array){
+       return `Venha assistir ao filme ${array.nome}, de ${array.ano}, dirigido por ${array.diretor} e estrelado por ${array.atores[0]+", "+array.atores[1]+", "+array.atores[2]+", "+array.atores[3]}.`
+   }
+
+   return filmeEmCartaz(filme)
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+   function pessoaAnonima (obj){
+       obj = {
+           ...obj,
+           nome: "ANÔNIMO"
+       }
+       return obj
+   }
+
+   return pessoaAnonima(pessoa)
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+let pessoasAutorizadas = []
+
+    for(let i = 0; i < pessoas.length; i++){
+        let arrayAtual = pessoas[i]
+        if(arrayAtual.altura >= 1.5 && arrayAtual.idade > 14 && arrayAtual.idade < 60){
+        pessoasAutorizadas.push(arrayAtual)
+        }        
+    }
+return pessoasAutorizadas   
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+    let pessoasNaoAutorizadas = []
+
+    for(let i = 0; i < pessoas.length; i++){
+        let arrayAtual = pessoas[i]
+        if(arrayAtual.altura >= 1.5 && arrayAtual.idade > 14 && arrayAtual.idade < 60){
+        }else{
+            pessoasNaoAutorizadas.push(arrayAtual)
+        }        
+    }
+return pessoasNaoAutorizadas
+
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    
+        for(let i in contas) {
+        let gastoCliente = contas[i].compras
+        let soma = 0
+        for(let i in gastoCliente){
+        soma += gastoCliente[i]
+        }
+        contas[i].saldoTotal -= soma
+        contas[i].compras = []
+        }
+        return contas
+      
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+    consultas.sort(function (x, y){
+        let a = x.nome.toUpperCase(),
+            b =  y.nome.toUpperCase();
+
+        return a == b ? 0 : a > b ? 1 : -1;
+    }) 
+    
+    return consultas
+
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+    consultas.sort(function (a, b) {
+	
+        return (a.dataDaConsulta > b.dataDaConsulta) ? 1 : ((b.dataDaConsulta > a.dataDaConsulta) ? -1 : 0);
+     
+    });
+    
+    return consultas
+
 }
