@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+.nomeEmpresa{
+    padding: 5px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: rgb(3, 64, 134);
+    background-color: aqua;
+}
+
+.logo{
+    width: 30px;
+    display: inline;
+}
+
+h1 {
+    display: inline;
+}
+
+.navegacao{
+    padding: 4px;
+    text-align: center;
+    background-color: rgb(3, 36, 63);
+}
+
+a{
+    font-size: 13px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 10px 30px 0px 10px;
+    font: optional;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#rodape{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+}
+
+.sociais{
+    padding: 5px 10px 0px;
+    width: 25px;
+}
+
+
+li{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(4, 58, 94);
+    padding: 0px 0px 0px 10px;
+    padding: 8px;
+}
+
+.h2{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(66, 77, 94);
+    padding: 5px 0px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    color: rgba(255, 255, 255, 0.432);
+}
+
+.subtitulos_tabela{
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 44, 73);
+}
+
+.img-tabela{
+    border: 3px solid rgb(6, 86, 161);
+    width: 70px;
+}
+
+.tabela{
+    
+    text-align: center;
+}
+
+.linha{
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(2, 61, 109);
+}
+
+form{
+    font-weight: bold;
+    color: rgb(2, 26, 90);
+    font-family: 'Roboto', sans-serif;
+    text-align: center; 
+}
+
+.barra{
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    width: 300px;
+    background-color: rgb(202, 235, 255);
+    border: 2px solid rgb(2, 174, 253);
+}
+
+button{
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: rgb(10, 51, 97);
+    color: rgb(90, 198, 248);
+}
