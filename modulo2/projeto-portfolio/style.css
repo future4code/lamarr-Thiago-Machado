@@ -1,0 +1,220 @@
+*{ 
+    margin: 0; 
+    padding: 0; 
+}
+
+body{
+    margin: 0px;
+    color: azure;
+    width: 100%;
+    background-color: rgb(49, 63, 75);
+}
+
+header{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    padding: 5px;
+    background-color: rgb(15, 45, 65);
+}
+
+.logo{
+    height: 55px;
+    display: inline;
+    width: 140px;
+}
+
+.bio{
+    margin-top: 105px;
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.habilidade{
+    margin-top: 105px;
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lista-habilidade > li > b{
+    color: aqua;
+    
+}
+.lista-habilidade > li{
+    padding: 0px 0px 10px 7px;
+}
+
+.lista-habilidade{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.perfil{
+    width: 90px;
+    position: fixed;
+    top: 7px;
+    right: 10px;
+}
+
+
+.lista{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.lista > li{
+    padding: 0px 0px 10px 7px;
+}
+
+.titulo-img{
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(2, 141, 255);
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.titulo-img:hover{
+    color: rgb(6, 253, 80);
+}
+
+.galeria{
+    text-align: center;
+}
+
+.imagem{
+    margin-left: 10px;
+    padding: 0px 15px 15px 0px;
+    display: inline;
+    width: 300px;
+}
+
+.botao-nav{
+    color: rgb(0, 159, 187);
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px 20px 0px 10px;
+    text-decoration: none;
+    border: 1px solid rgb(0, 159, 187);
+    border-radius: 100px;
+}
+
+.botao-nav:hover{
+    color: rgb(6, 253, 80);
+    border: 1px solid rgb(6, 253, 80);
+}
+
+
+.navegacao{
+    margin-top: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    padding: 13px 0px;
+    background-color: rgb(15, 45, 65);
+}
+
+
+
+#form{ 
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(39, 46, 46);
+    padding: 10px 0px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+.barra{
+    padding: 5px;
+    color: azure;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid white;
+    border-radius: 100px;
+    background: none;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.button{
+    border-radius: 100px;
+    border: 2px solid rgb(74, 196, 252);
+    background-color: rgb(34, 34, 34);
+    font-size: 20px;
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
+    color: aqua;
+}
+
+.button:hover{
+    color: rgb(6, 253, 80);
+    border: 1px solid rgb(6, 253, 80);
+}
+
+.img-projeto{
+    text-align: center;
+}
+
+.img-projeto > img{
+    border: 3px solid rgb(1, 173, 253);
+    border-radius: 60px;
+    width: 60%;
+    margin-bottom: 60px;
+}
+
+#rodape{
+    position: fixed;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    bottom: 0;
+}
+
+.sociais{
+    padding: 5px 10px 0px;
+    width: 30px;
+}
+
+.text-rodape{
+    margin-left: 10px;
+}
+.email{
+    bottom: 2px;
+    position: fixed;
+    right: 7px;
+    display: inline;
+    text-align: center;
+}
+
+.email > p{
+    font-family: 'Montserrat', sans-serif;
+    right: 0px;
+}
+
+.email-img{
+    bottom: 10px;
+    padding: 5px 10px 0px;
+    width: 30px;
+}
+
+@media (max-width: 1000px) {
+
+nav{
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px){
+    .perfil{
+        width: 60px;
+        top: 3px;
+    }
+}
