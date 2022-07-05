@@ -1,12 +1,14 @@
 import React from 'react'
-import './style.css'
+import {IconContainer} from './style.js'
 
 
 
 
 export function IconeComContador(props) {
-	return <div className='IconContainer'>
-		< img className ='IconImage' alt={'Icone'} src={props.icone} onClick={props.onClickIcone}/>
+	return (
+	<IconContainer>
+		<img className ='IconImage' alt={'Icone'} src={props.icone} onClick={props.onClickIcone}/>
 		<p>{props.valorContador}</p>
-	</div>
+	</IconContainer>
+	)
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './style.css'
+import {PostContainer} from './style'
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
@@ -62,8 +62,21 @@ function Post(props){
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
     }
 
+    const info = [
+      {nomeUsuario:props.nomeUsuario,
+      fotoUsuario:props.fotoUsuario,
+      fotoPost:props.fotoPost}
+    ]
+
+let arrayComponentes=info.map((elemento,index)=>{
+  return elemento
+})
+
+    
+console.log(arrayComponentes)
+
   return(
-    <div className = 'PostContainer'>
+    <PostContainer>
       <div className = 'PostHeader'>
         <img className = 'UserPhoto' src={props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{props.nomeUsuario}</p>
@@ -86,7 +99,7 @@ function Post(props){
 
       </div>
       {componenteComentario}
-    </div>
+    </PostContainer>
   )
 }
 
