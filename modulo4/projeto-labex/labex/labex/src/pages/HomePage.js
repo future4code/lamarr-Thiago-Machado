@@ -6,7 +6,7 @@ export const HomePage = () => {
     const navigate = useNavigate()
 
     const goToAdminHome = () => {
-        navigate('/admin/trips/list')
+        navigate('/login')
     }
 
     const goToListTrips = () => {
