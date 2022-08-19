@@ -23,7 +23,7 @@ export const PainelAdmin = styled.div`
    }
 
 `
-export const Card = styled.div`
+export const Card = styled.button`
    flex: 0 0 50%;
    padding: 8px;
    margin: 10px;
@@ -35,6 +35,7 @@ export const Card = styled.div`
    border: 1px solid aqua;
    border-radius: 10px;
    background: linear-gradient(90deg, rgba(5,217,230,0.3533788515406162) 2%, rgba(0,69,255,0.20772058823529416) 100%);
+   cursor: pointer;
 
    img{
       width: 50px;

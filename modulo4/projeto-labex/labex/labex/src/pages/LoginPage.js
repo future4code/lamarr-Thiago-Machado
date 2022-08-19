@@ -26,6 +26,7 @@ export const LoginPage = () => {
     const Envio = (event) => {
         event.preventDefault()
         axios.post(`${URL_BASE_GET}login`, form).then((response)=>{
+            localStorage.setItem("token", response.data.token)
             return goToAdminHome()
         }).catch((erro)=>{
             alert('Seu E-mail ou senha, estão incorretos')

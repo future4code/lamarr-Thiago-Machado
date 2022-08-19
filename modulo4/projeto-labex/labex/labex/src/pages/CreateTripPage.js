@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom"
 import { Paises } from '../componets/paises'
 import Select from 'react-select'
 import { Formulario, Form, Tela, Buttons } from "../Style/CreateTripStyle"
+import useProtectedPage from "../hook/useProtectedPage"
 
 export const CreateTripPage=()=>{
+    useProtectedPage()
     const navigate = useNavigate()
 
     const voltar = () => {
