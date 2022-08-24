@@ -14,15 +14,15 @@ export const ListTripsPage = () => {
         navigate(-1)
     }
 
-    const [data,isLoadding,erro] = useRequestData(`${URL_BASE_GET}trips`)
+    const [data, isLoadding, erro] = useRequestData(`${URL_BASE_GET}trips`)
     const Viagens = data && data.map((item) => {
         return (
             <Card key={item.id}>
-            <h1>{item.name}</h1>
-            <p>Planeta: {item.planet}</p>
-            <p>Descrição: {item.description}</p>
-            <p>Duração: {item.durationInDays}-Dias</p>
-            <p>Data: {item.date}</p>
+                <h1>{item.name}</h1>
+                <p>Planeta: {item.planet}</p>
+                <p>Descrição: {item.description}</p>
+                <p>Duração: {item.durationInDays}-Dias</p>
+                <p>Data: {item.date}</p>
             </Card>
         )
     })

@@ -1,7 +1,5 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { Paises } from '../componets/paises'
-import Select from 'react-select'
 import { Formulario, Form, Tela, Buttons } from "../Style/LoginStyle"
 import { useForm } from "../hook/useForm"
 import URL_BASE_GET from '../componets/URL_BASE_GET'
@@ -25,10 +23,10 @@ export const LoginPage = () => {
 
     const Envio = (event) => {
         event.preventDefault()
-        axios.post(`${URL_BASE_GET}login`, form).then((response)=>{
+        axios.post(`${URL_BASE_GET}login`, form).then((response) => {
             localStorage.setItem("token", response.data.token)
             return goToAdminHome()
-        }).catch((erro)=>{
+        }).catch((erro) => {
             alert('Seu E-mail ou senha, estão incorretos')
         })
         console.log(form)

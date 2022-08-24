@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useNavigate } from "react-router-dom"
 import { Paises } from '../componets/paises'
 import axios from 'axios'
@@ -14,13 +14,13 @@ export const ApplicationFormPage = () => {
         navigate(-1)
     }
 
-    const [data,isLoadding,erro] = useRequestData(`${URL_BASE_GET}trips`)
+    const [data] = useRequestData(`${URL_BASE_GET}trips`)
 
-   
+
 
     // ----------> form <----------------------------------------------
     const [form, onChange] = useForm({
-        id:'',
+        id: '',
         name: "",
         age: "",
         applicationText: "",
@@ -28,13 +28,13 @@ export const ApplicationFormPage = () => {
         country: ""
     })
 
-    const id= form.id
+    const id = form.id
 
     const Envio = (event) => {
         event.preventDefault()
-        axios.post(`${URL_BASE_GET}trips/${id}/apply`, form).then((response)=>{
+        axios.post(`${URL_BASE_GET}trips/${id}/apply`, form).then((response) => {
             alert('Tudo Certo')
-        }).catch((erro)=>{
+        }).catch((erro) => {
             alert(erro)
         })
         console.log(form)
@@ -51,30 +51,31 @@ export const ApplicationFormPage = () => {
             <Formulario>
                 <h1>Inscreva-se para uma viagem</h1>
                 <Form onSubmit={Envio}>
-                <select
+                    <select
                         placeholder='Escolha um Pais'
                         onChange={onChange}
                         type="text"
                         name="id"
+                        value={form.id}
                         required
-                        >
+                    >
 
                         {data && data.map((option) => (
                             <option
-                            placeholder='Escolha um Pais'
-                            key={option.name}
-                            value={option.id}
+                                placeholder='Escolha um Pais'
+                                key={option.name}
+                                value={option.id}
                             >{option.name}</option>
                         ))}
                     </select>
-                    
+
                     <input
                         placeholder="Nome"
                         name="name"
                         type="text"
                         value={form.name}
                         onChange={onChange}
-                   
+
                         required
                     ></input>
 
@@ -112,22 +113,21 @@ export const ApplicationFormPage = () => {
                         type="text"
                         name="country"
                         required
-                        >
+                    >
 
                         {Paises.map((option) => (
                             <option
-                            placeholder='Escolha um Pais'
-                            key={option.name}
-                            value={option.name}
+                                placeholder='Escolha um Pais'
+                                key={option.name}
+                                value={option.name}
                             >{option.name}</option>
                         ))}
                     </select>
-
                     <Buttons>
-                        <button onClick={voltar}>Voltar</button>
                         <button type="submit">Enviar</button>
                     </Buttons>
                 </Form>
+                <button onClick={voltar}>Voltar</button>
 
             </Formulario>
         </Tela>

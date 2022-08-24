@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import axios from 'axios'
 
 
@@ -16,7 +16,7 @@ const useRequestData=(url)=>{
           setIsLoading(false)
           setErro(error)
         })
-      }, [])
+      }, [url])
 
     return [data,isLoading,erro];
 }

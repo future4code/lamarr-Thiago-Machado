@@ -43,7 +43,7 @@ export const Buttons = styled.div`
    }
 
 `
-export const Form = styled.div`
+export const Form = styled.form`
     margin-bottom: 20px;
 
     input{

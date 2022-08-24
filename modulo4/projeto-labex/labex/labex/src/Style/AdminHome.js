@@ -23,7 +23,7 @@ export const PainelAdmin = styled.div`
    }
 
 `
-export const Card = styled.button`
+export const Card = styled.div`
    flex: 0 0 50%;
    padding: 8px;
    margin: 10px;

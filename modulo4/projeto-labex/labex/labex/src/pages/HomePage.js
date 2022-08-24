@@ -5,8 +5,14 @@ import { Tela, Buttons, Home } from "../Style/HomeStyle"
 export const HomePage = () => {
     const navigate = useNavigate()
 
-    const goToAdminHome = () => {
-        navigate('/admin/trips/list')
+    const goToLogin = () => {
+        const token = localStorage.getItem("token")
+
+        if (token === null) {
+            navigate("/login")
+        } else {
+            navigate("/admin/trips/list")
+        }
     }
 
     const goToListTrips = () => {
@@ -18,7 +24,7 @@ export const HomePage = () => {
             <Home>
                 <h1>LabeX</h1>
                 <Buttons>
-                    <button onClick={goToAdminHome}>Área Admin</button>
+                    <button onClick={goToLogin}>Área Admin</button>
                     <button onClick={goToListTrips}>Ver Viagens</button>
                 </Buttons>
             </Home>
