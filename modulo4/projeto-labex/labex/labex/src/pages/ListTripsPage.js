@@ -36,6 +36,7 @@ export const ListTripsPage = () => {
                     <button onClick={goToFormPage}>Inscrever-se</button>
                 </Buttons>
             </Lista>
+            
             <Container>
                 {isLoadding && "...Carregando!!! ...."}
                 {!isLoadding && data && Viagens}

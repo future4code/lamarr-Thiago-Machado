@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { Planetas } from '../componets/planeta'
-import { Formulario, Form, Tela, Buttons } from "../Style/CreateTripStyle"
+import { Formulario, Form, Tela, Buttons, Select } from "../Style/CreateTripStyle"
 import useProtectedPage from "../hook/useProtectedPage"
 import axios from "axios"
 import URL_BASE_GET from '../componets/URL_BASE_GET'
@@ -34,12 +34,12 @@ export const CreateTripPage = () => {
 
     const Envio = (event) => {
         event.preventDefault()
-        axios.post(`${URL_BASE_GET}trips`, form, header).then((response) => {
-            alert('Tudo Certo')
+        axios.post(`${URL_BASE_GET}trips`, form, header).then(() => {
+            alert('Uma Viagem criada com sucesso!!!')
+            window.location.reload()
         }).catch((erro) => {
             alert(erro)
         })
-
     }
 
 
@@ -59,23 +59,22 @@ export const CreateTripPage = () => {
                         onChange={onChange}
                         required
                     ></input>
-                    <select
-                        placeholder="planet"
+                    <Select
                         name="planet"
-                        type="text"
                         value={form.planet}
                         onChange={onChange}
                         required
                     >
+                        <option value='' disabled select>Escolha um planeta</option>
                         {Planetas.map((option) => (
+
                             <option
-                                placeholder='Escolha um Pais'
                                 key={option.id}
                                 value={option.title}
                             >{option.title}
                             </option>
                         ))}
-                    </select>
+                    </Select>
                     <input
                         placeholder="Data"
                         name="date"
@@ -101,11 +100,11 @@ export const CreateTripPage = () => {
                         required
                     ></input>
                     <Buttons>
-
+                        <button onClick={voltar}>Voltar</button>
                         <button type="submit">Criar</button>
                     </Buttons>
                 </Form>
-                <button onClick={voltar}>Voltar</button>
+
             </Formulario>
         </Tela>
     )

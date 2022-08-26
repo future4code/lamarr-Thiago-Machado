@@ -24,7 +24,7 @@ export const PainelAdmin = styled.div`
 
 `
 export const Card = styled.div`
-   flex: 0 0 50%;
+   flex: 0 0 35%;
    padding: 8px;
    margin: 10px;
    display: flex;
@@ -32,14 +32,14 @@ export const Card = styled.div`
    align-items: center;
    scroll-snap-align: start;
    color: white;
-   border: 1px solid aqua;
    border-radius: 10px;
-   background: linear-gradient(90deg, rgba(5,217,230,0.3533788515406162) 2%, rgba(0,69,255,0.20772058823529416) 100%);
-   cursor: pointer;
+   background: linear-gradient(0deg, rgba(4,70,139,1) 2%, rgba(22,143,175,1) 100%);
 
    img{
-      width: 50px;
+      width: 35px;
       cursor: pointer;
+      margin: 0;
+      padding: 0;
    }
    button{
       background: none;
@@ -48,6 +48,8 @@ export const Card = styled.div`
    }
 
    h1{
+      margin: 0;
+      padding: 0;
       cursor: pointer;
       color: white;
    }
@@ -73,12 +75,12 @@ export const Container = styled.div`
 }
  
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, rgba(5,217,230,0.3533788515406162) 2%, rgba(0,69,255,0.20772058823529416) 100%);; 
+  background: linear-gradient(90deg, rgba(4,70,139,1) 2%, rgba(22,143,175,1) 100%); 
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background: linear-gradient(90deg, rgba(5,217,230,1) 2%, rgba(0,69,255,1) 100%);
+   background: linear-gradient(270deg, rgba(5,217,230,1) 2%, rgba(0,69,255,1) 100%);
 }
 `
 

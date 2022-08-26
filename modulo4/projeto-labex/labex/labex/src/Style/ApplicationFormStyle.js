@@ -20,6 +20,17 @@ export const Formulario = styled.div`
    }
 
 `
+export const Select= styled.select`
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding-left:10px ;
+    border-radius: 4px;
+    border: 1px solid gray;
+   color: gray;
+`
+
+
 
 export const Buttons = styled.div`
    display: flex;
