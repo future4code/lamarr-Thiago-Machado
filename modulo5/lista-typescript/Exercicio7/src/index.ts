@@ -4,9 +4,16 @@ type Produtos={
     valorUnitario: number
 }
 
+type novosProdutos = {
+    nome: string
+    quantidade: number
+    valorUnitario: string
+}
 
 
-const produtos: Produtos[]=[
+
+
+const produtos: Produtos[] =[
 	{ nome: "MacMugffin", quantidade: 37, valorUnitario: 51.040},
 	{ nome: "Vassoura voadora", quantidade: 56, valorUnitario: 210.0},
 	{ nome: "Laço da verdade", quantidade: 32, valorUnitario: 571.5},
@@ -15,27 +22,30 @@ const produtos: Produtos[]=[
 	{ nome: "Plumbus", quantidade: 13, valorUnitario: 140.44},
 	{ nome: "Pokebola", quantidade: 200, valorUnitario: 99.9915}
 ]
-type novosProdutos = {
-    nome: string
-    quantidade: number
-    valorUnitario: string
-}
 
-function Convercao (produtos:Produtos[]):novosProdutos{
-    const ajustaPreco = (preco :number): string => {
+
+function ajustaPreco (preco :number): string {
         const valorAjustado: string = preco.toFixed(2).replace('.', ',')
         return "R$ "+valorAjustado
     }
 
-    const novosProdutos: novosProdutos[] = produtos
+function converterPreco (produtos:Produtos[]):novosProdutos{
+    const array:novosProdutos[] = produtos.map((array:Produtos[]){
+        array 
+        for(let i=0; array.length > i; i++){
+            let valor:string = ajustaPreco(array[i].valorUnitario)
+            
+
+            }
+    })
+
     
-    for(let i=0; produtos.length < i; i++){
-        const valor: string =  ajustaPreco(produtos[i].valorUnitario)
-       novosProdutos[i].valorUnitario = valor
-    }
+
+    
+
+    return array
+
+  } 
    
 
-
-}
-
-console.table(Convercao(produtos))
+console.table(converterPreco(produtos))
